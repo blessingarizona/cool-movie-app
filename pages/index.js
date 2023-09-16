@@ -22,7 +22,7 @@ export async function getStaticProps() {
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWY3ZjhjMjM5MmQxZjRmNzgyOTk3M2IyNjk4ZWRlOCIsInN1YiI6IjY1MDBjODYzZGI0ZWQ2MTAzM2EyM2E1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LvT7OvgSzHf4zXmOywW4YEK7_AZ_WvuUax5gVzlPeBI",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ODhhZTFkY2JkODExMmFhZjQ0OWJkNmQzNWUyMmY1YSIsInN1YiI6IjY1MDFhNDVkZGI0ZWQ2MTAzNDQwMjgzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JraT-M2Dy97do69cZhnjZ3xtbUeE8Q5qYKhahH7Gsa8",
       },
     };
       const response = await fetch(

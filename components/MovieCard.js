@@ -7,12 +7,12 @@ export default function MovieCard({ movie }) {
         <>
             <Link href={`/${movie.id}`} style={{textDecoration: 'none'}}>
 
-                <div className="movie-card">
-                    <div className="movie-poster">
+                <div className="movie-card" data-testid:movie-card>
+                    <div className="movie-poster" data-testid:movie-poster>
                         <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
                     </div>
-                    <p className="gray"> {movie.release_date.slice(0, 4)} </p>
-                    <p className="movie-card-title"> {movie.title} </p>
+                    <p className="gray" data-testid:movie-release-date> {movie.release_date.slice(0, 4)} </p>
+                    <p className="movie-card-title" data-testid:movie-title> {movie.title} </p>
                     <div className="movie-likes" >
                         <span className=""> <img src="/images/imdb.png" alt="imdb logo" /> {movie.vote_average} / {movie.vote_count} </span>
                         <span> <img src="/images/orange.png" alt="orange logo" /> {Math.ceil(percentage_vote)}%</span>

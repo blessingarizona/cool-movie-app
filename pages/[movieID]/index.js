@@ -24,8 +24,8 @@ export default function MovieDetailPage({ movie }) {
                     <li className="gray bold"><img src="/images/Calendar.png" alt="Calendar logo" width={28} height={28} />Upcoming</li>
                 </ul>
                 <div className="movie-quiz">
-                    <p className="gray bold free">Play movie quizes and earn free tickets</p>
-                    <p className="gray">50k people are playing now</p>
+                    <p className="gray bold free">Get free movie tickets</p>
+                    <p className="gray">Enjoy watching your favourite movies</p>
                     <button>Start playing</button>
                 </div>
                 <div className="gray bold logout"> <img src="/images/Logout.png" alt="Logout logo" />Logout</div>
@@ -42,16 +42,16 @@ export default function MovieDetailPage({ movie }) {
                     <div className="flex left">
                         <div>
                             <span className="bold gray">
-                                <span> {movie.title} </span>
+                                <span data-testid:movie-title> {movie.title} </span>
                                  • 
-                                <span> {movie.release_date} </span>
+                                <span data-testid:movie-release-date> {movie.release_date} </span>
                                  • 
-                                <span> {movie.runtime}m </span>
+                                <span data-testid:movie-runtime> {movie.runtime}m </span>
                                  </span>
                                  {movie.genres.map((genre, i) => <span key={i} className="genre"> {genre.name} </span>) }
                             
                         </div>
-                        <p className="gray overview"> {movie.overview} </p>
+                        <p className="gray overview" data-testid:movie-overview> {movie.overview} </p>
                         <div className="movie-makers flex">
                             <span>Director : <span className="rose">Joseph Kosinski</span></span>
                             <span>Writers : <span className="rose">Jim Cash, Jack Epps Jr, Peter Craig</span></span>
@@ -91,7 +91,7 @@ export async function getStaticPaths() {
         headers: {
             accept: "application/json",
             Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWY3ZjhjMjM5MmQxZjRmNzgyOTk3M2IyNjk4ZWRlOCIsInN1YiI6IjY1MDBjODYzZGI0ZWQ2MTAzM2EyM2E1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LvT7OvgSzHf4zXmOywW4YEK7_AZ_WvuUax5gVzlPeBI",
+                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ODhhZTFkY2JkODExMmFhZjQ0OWJkNmQzNWUyMmY1YSIsInN1YiI6IjY1MDFhNDVkZGI0ZWQ2MTAzNDQwMjgzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JraT-M2Dy97do69cZhnjZ3xtbUeE8Q5qYKhahH7Gsa8",
         },
     };
 
@@ -119,7 +119,7 @@ export async function getStaticProps(context) {
         headers: {
             accept: "application/json",
             Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWY3ZjhjMjM5MmQxZjRmNzgyOTk3M2IyNjk4ZWRlOCIsInN1YiI6IjY1MDBjODYzZGI0ZWQ2MTAzM2EyM2E1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LvT7OvgSzHf4zXmOywW4YEK7_AZ_WvuUax5gVzlPeBI",
+                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ODhhZTFkY2JkODExMmFhZjQ0OWJkNmQzNWUyMmY1YSIsInN1YiI6IjY1MDFhNDVkZGI0ZWQ2MTAzNDQwMjgzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JraT-M2Dy97do69cZhnjZ3xtbUeE8Q5qYKhahH7Gsa8",
         },
     };
 

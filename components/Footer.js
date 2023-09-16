@@ -15,7 +15,7 @@ export default function Footer() {
                     <span>Privacy & Policy</span>
                     <span>Press Room</span>
                 </div>
-                <p className="gray bold">© 2021 MovieBox by Adriana Eka Prayudha  </p>
+                <p className="gray bold">© 2023 MovieBox by Aritech  </p>
             </div>
         </div>
     )
