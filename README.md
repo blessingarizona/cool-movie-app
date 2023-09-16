@@ -1,4 +1,4 @@
-First, run the development server:
+To run this code on localhost on the project terminal using VScode enter
 
 ```bash
 npm run dev
@@ -8,5 +8,5 @@ yarn dev
 pnpm dev
 ```
 
-
+Then it will load on localhost
 
